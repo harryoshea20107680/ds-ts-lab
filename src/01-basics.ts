@@ -28,7 +28,13 @@ console.log(friends[1]);
 interface Colleague {
     name: string;
     department: string;
-    contact: Array<any>;
+    contact: {email: string; extension: number};
+}
+
+// interface for colleague history
+interface ColleagueHistory {
+  current: Colleague[],
+  former: Colleague[]
 }
 
 const colleague1 = {
@@ -57,7 +63,9 @@ const colleague3 = {
     extension: 125,
   },
 };
-const colleagues = {
+
+//updated colleagues data structure
+export const colleagues : ColleagueHistory = {
   current: [colleague1, colleague2, colleague3],
   former: [],
 };

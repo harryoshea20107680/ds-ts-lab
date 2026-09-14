@@ -1,0 +1,6 @@
+typescript lab github repo :
+https://github.com/harryoshea20107680/ds-ts-lab.git
+
+
+submission box :
+https://moodle.setu.ie/mod/assign/view.php?id=46978

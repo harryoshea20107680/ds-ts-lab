@@ -39,7 +39,6 @@ addColleague(colleagues.current, "Sheild O Connell", "HR", "soc@here.com");
 console.log(colleagues.current.filter((c) => c.name === "Sheild O Connell"));
 
 
-
 function sortColleagues(
   colleagues: Colleague[],
   sorter: (c1: Colleague, c2: Colleague) => number,
@@ -58,8 +57,6 @@ console.log(sortColleagues(colleagues.current, (a, b) => (a.contact.extension - 
 console.log(sortColleagues(colleagues.current, (a, b) => (a.name.length - b.name.length),1));
 console.log(sortColleagues(colleagues.current, (a, b) => (a.name.length - b.name.length))); // NEW
 
-
-
 //Searches an array of friends for those that satisfy a criterion. 
 //The criterion is specified as a callback.
 function findFriends(
@@ -74,3 +71,17 @@ function findFriends(
 console.log('Friends starting with Ma: ' + findFriends(friends, (friend) => friend.name.startsWith('Ma')));
 console.log('friends over 35: ' + findFriends(friends, (friend) => friend.age < 35));
 
+
+//adds an interest to a friend’s array of interests and returns the updated interests array (of strings)
+function addInterest(friend: Friend, interest: string){
+  if (friend.interests){
+  friend.interests?.push(interest)
+  }
+  else
+    friend.interests = [];
+    friend.interests?.push(interest)
+  return friend.interests;
+}
+
+
+console.log(addInterest(friends[0], 'Politics'))

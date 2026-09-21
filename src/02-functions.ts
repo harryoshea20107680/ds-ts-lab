@@ -77,9 +77,10 @@ function addInterest(friend: Friend, interest: string){
   if (friend.interests){
   friend.interests?.push(interest)
   }
-  else
+  else{
     friend.interests = [];
     friend.interests?.push(interest)
+  }
   return friend.interests;
 }
 

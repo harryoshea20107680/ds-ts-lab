@@ -22,7 +22,7 @@ export type MenuItemPartial = Partial<MenuItem>
 export interface ComboDeal {
     id: number;
     name: string;
-    items: string[];
+    items: MenuItem[];
     price: number
 }
 

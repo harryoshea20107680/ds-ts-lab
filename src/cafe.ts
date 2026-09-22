@@ -72,8 +72,12 @@ const currentOrder: OrderLine[] = [risotto, lunchCombo, soup];
 //     rely on *type inference* (check the inferred signature with VS Code's
 //     intellisense before you decide).
 
-function describe(item: MenuItem){
-  return `${item.name} (${item.course}) - EUR ${item.price.toFixed(2)}`;
+function describe(item: OrderLine){
+  if(!('items' in item)){
+    return `${item.name} (${item.course}) - EUR ${item.price.toFixed(2)}`;}
+  else{
+    return `${item.name} - EUR ${item.price.toFixed(2)}`;
+  }
 }
 
 // TS: An OrderLine is a union, so this function must *narrow* the type before

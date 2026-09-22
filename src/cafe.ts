@@ -16,6 +16,7 @@ const soup: MenuItem = {
     calories: 180,
     allergens: ["celery"],
   },
+  discountPercent: 50,
 };
 
 const risotto: MenuItem = {
@@ -105,10 +106,11 @@ function filterMenu(items: MenuItem[], predicate: (item: MenuItem) => boolean)
 //     match. Beware - the compiler will complain about comparing a possibly
 //     'undefined' value with a number, so handle that case explicitly.
 function cheapest(items: MenuItem[], max?: number) {
-  const sorted = items.sort((a, b) => a.price - b.price);
-  if(max = undefined){return sorted}
+  const copyItems = items;
+  const sortedCopy = copyItems.sort((a, b) => a.price - b.price);
+  if(max == undefined){return sortedCopy}
   else{
-  return sorted.slice(0, max);
+  return sortedCopy.slice(0, max);
   }
 }
 

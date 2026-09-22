@@ -166,4 +166,4 @@ console.log(allergyCard(brownie));
 //     your types are in place, fix each one and note it in your commit message.
 console.log(describe(lunchCombo));
 console.log(updateItem(soup, { price: 7.00 }));
-console.log(firstMatch(menu, (i) => i.calories < 300));
+console.log(firstMatch(menu, (i) => i.nutrition.calories < 300));

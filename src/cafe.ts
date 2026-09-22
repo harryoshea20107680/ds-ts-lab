@@ -1,7 +1,3 @@
-// ---------------------------------------------------------------
-// 1. THE MENU
-// ---------------------------------------------------------------
-
 import { MenuItem, MenuItemPartial, KitchenTicket, ComboDeal, Course, OrderLine, AllergyCard } from "./menuTypes";
 
 // TS: These three objects share a structure - declare an interface (call it
@@ -166,7 +162,9 @@ console.log(allergyCard(brownie));
 
 // TS: The compiler will reject the next line once kitchenTicket returns a
 //     Readonly<> type. Leave it commented out with a note explaining why.
-// kitchenTicket(brownie).name = "Something else";
+//kitchenTicket(brownie).name = "Something else"; 
+//Tested successfully: 
+// Unable to compile TypeScript: src/cafe.ts:165:24 - error TS2540: Cannot assign to 'name' because it is a read-only property.
 
 // TS: Three more lines below are bugs that only the compiler can see. Once
 //     your types are in place, fix each one and note it in your commit message.
